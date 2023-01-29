@@ -1,0 +1,15 @@
+.nav {
+    background-color: black;
+    text-align: right;
+    height: 2rem;
+}
+
+.nav-element {
+    color: antiquewhite;
+    margin-right: .5rem;
+    text-decoration: none;
+}
+
+.nav-element:hover {
+    color: blue;
+}

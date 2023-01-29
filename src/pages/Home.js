@@ -1,15 +1,19 @@
-import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 
 function Home() {
   return (
-    <div className="body">
-      <div className="App">Home Page</div>
-
-      <Button text="Button 1"></Button>
-      <Button text="Button 2"></Button>
-      <Button text="Button 3"></Button>
-    </div>
+    <ul>
+      <li>
+        <Link to={'/login'}>Login</Link>
+      </li>
+      <li>
+        <Link to={'/dashboard'}>Dashboard</Link>
+      </li>
+      <li>
+        <Link to={'/profile'}>Profile</Link>
+      </li>
+    </ul>
   );
 }
 
