@@ -1,4 +1,4 @@
-async function loginUser(credentials) {
+function loginUser(credentials) {
   return fetch('http://localhost:8080/login', {
     method: 'POST',
     headers: {
@@ -9,4 +9,4 @@ async function loginUser(credentials) {
     .then(data => data.json())
  }
 
-  export default loginUser();
+  export default loginUser;

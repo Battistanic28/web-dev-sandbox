@@ -2,15 +2,24 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import loginUser from '../middleware/loginUser';
 
-function Login( setToken ) {
+function Login( { setToken } ) {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
 
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const token = await loginUser({
+      username,
+      password
+    });
+    setToken(token);
+  }
+
   return (
     <>
       <h2 className="login">Login</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
       <label>
         <p>Username</p>
         <input
@@ -33,8 +42,8 @@ function Login( setToken ) {
   );
 }
 
-// Login.PropTypes = {
-//   setToken: PropTypes.func.isRequired
-// }
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired
+}
 
 export default Login;
