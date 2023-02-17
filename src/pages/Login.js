@@ -13,6 +13,7 @@ function Login( { setToken } ) {
       username,
       password
     });
+    console.log('token', token);
     setToken(token);
   }
 
