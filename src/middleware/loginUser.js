@@ -1,5 +1,7 @@
+// TODO: move base URL to config
+
 function loginUser(credentials) {
-  return fetch('http://localhost:3000/auth/token', {
+  return fetch('http://localhost:5000/auth/token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
